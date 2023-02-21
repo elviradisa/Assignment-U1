@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/login_register.css">
+    <link rel="stylesheet" href="./css/quiz.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrapper">
+        <header class="up_top">
+            <img src="media/logo.png">
+            <h3>Dog Breed Quiz</h3>
+        </header>
+<!--
+        <main class="login">
+            <h1 id="title_login" class="text_center">LOGIN</h1>
+
+            <label for="user_name">User Name:</label>
+            <input type="text" name="user_name">
+
+            <label for="password">Password:</label>
+            <input type="text" name="password">
+
+            <p id="paragraph" class="text_center">Let the magic start!</p>
+
+            <button class="login_button">Login</button>
+
+            <a onclick="register()" href="#" class="text_center register">New to this? Register for free</a>
+            <a onclick="return_to_login()" href="#" class="text_center return_login">Already have an account? Return to login</a>
+        </main>
+-->
+
+        <main class="quiz">
+           <div class="login_information">
+            <p>din mamma</p>
+            <button class="logout_button">logout</button>
+           </div> 
+
+           <img class="standby_image" src="media/logo.png" alt="background_dog">
+
+           <div class="button_holder">
+            <button class="top_left"></button>
+            <button class="top_right"></button>
+            <button class="bottom_left"></button>
+            <button class="bottom_right"></button>
+           </div>
+        </main>
+       
+    
+        <footer class="down_low">
+            <p>The Dog Breed Quiz is made possible thanks to the free API by <a href="#">DOG CEO Zine</a></p>
+        </footer>
+    </div>
+    
+    <script src="./data.js"></script>
+    <script src="./quiz.js"></script>
+    <script src="./server_connection.js"></script>
+    <script src="./js/login_register.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
