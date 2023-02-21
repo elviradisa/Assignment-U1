@@ -1,0 +1,31 @@
+.login {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.text_center {
+    text-align: center;
+}
+
+.register {
+    margin-top: 50px;
+    font-size: 18px;
+}
+
+label {
+    font-size: 18px;
+}
+
+input {
+    height: 30px;
+}
+
+button {
+    height: 50px;
+    font-size: 18px;
+}
+
+.return_login {
+    display: none;
+}
