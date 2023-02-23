@@ -4,14 +4,19 @@
     gap: 5px;
 }
 
+#title_login {
+    font-size: 40px;
+    text-shadow: 4px 3px 2px rgb(235, 194, 235);
+}
+
 .text_center {
     text-align: center;
 }
 
-.register {
-    margin-top: 50px;
-    font-size: 18px;
+input {
+    background-color: rgb(235, 194, 235);
 }
+
 
 label {
     font-size: 18px;
@@ -24,8 +29,16 @@ input {
 button {
     height: 50px;
     font-size: 18px;
+    background-color: rgba(255, 255, 255, 0.618);
 }
 
-.return_login {
+.go_to_register_text {
+    margin-top: 50px;
+    font-size: 18px;
+}
+
+.go_to_login_text {
     display: none;
+    margin-top: 50px;
+    font-size: 18px;
 }
