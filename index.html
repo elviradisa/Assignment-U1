@@ -15,7 +15,7 @@
             <img src="media/logo.png">
             <h3>Dog Breed Quiz</h3>
         </header>
-<!--
+
         <main class="login">
             <h1 id="title_login" class="text_center">LOGIN</h1>
 
@@ -23,16 +23,22 @@
             <input type="text" name="user_name">
 
             <label for="password">Password:</label>
-            <input type="text" name="password">
+            <input type="password" name="password">
+
+            <div class="background_contacting_server">
+                <p class="contacting_server">Contacting Server...</p>
+            </div>
+
+            
 
             <p id="paragraph" class="text_center">Let the magic start!</p>
 
-            <button class="login_button">Login</button>
+            <button onclick="login()" class="login_button">Login</button>
 
-            <a onclick="register()" href="#" class="text_center register">New to this? Register for free</a>
-            <a onclick="return_to_login()" href="#" class="text_center return_login">Already have an account? Return to login</a>
+            <a onclick="go_to_register_page()" href="#" class="text_center go_to_register_text">New to this? Register for free</a>
+            <a onclick="go_to_login_page()" href="#" class="text_center go_to_login_text">Already have an account? Return to login</a>
         </main>
--->
+<!--
 
         <main class="quiz">
            <div class="login_information">
@@ -43,13 +49,13 @@
            <img class="standby_image" src="media/logo.png" alt="background_dog">
 
            <div class="button_holder">
-            <button class="top_left"></button>
-            <button class="top_right"></button>
-            <button class="bottom_left"></button>
-            <button class="bottom_right"></button>
+            <button onclick="quiz()" id="quiz_button" class="top_left"></button>
+            <button onclick="quiz()" id="quiz_button" class="top_right"></button>
+            <button onclick="quiz()" id="quiz_button" class="bottom_left"></button>
+            <button onclick="quiz()" id="quiz_button" class="bottom_right"></button>
            </div>
         </main>
-       
+    -->  
     
         <footer class="down_low">
             <p>The Dog Breed Quiz is made possible thanks to the free API by <a href="#">DOG CEO Zine</a></p>
