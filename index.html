@@ -20,10 +20,10 @@
             <h1 id="title_login" class="text_center">LOGIN</h1>
 
             <label for="user_name">User Name:</label>
-            <input type="text" name="user_name">
+            <input type="text" name="user_name" class="user_name">
 
             <label for="password">Password:</label>
-            <input type="password" name="password">
+            <input type="password" name="password" class="password">
 
             <div class="background_contacting_server">
                 <p class="contacting_server">Contacting Server...</p>
@@ -34,11 +34,12 @@
             <p id="paragraph" class="text_center">Let the magic start!</p>
 
             <button onclick="login()" class="login_button">Login</button>
+            <button onclick="register()" class="register_button" >Register</button>
 
             <a onclick="go_to_register_page()" href="#" class="text_center go_to_register_text">New to this? Register for free</a>
             <a onclick="go_to_login_page()" href="#" class="text_center go_to_login_text">Already have an account? Return to login</a>
         </main>
-<!--
+
 
         <main class="quiz">
            <div class="login_information">
@@ -55,7 +56,7 @@
             <button onclick="quiz()" id="quiz_button" class="bottom_right"></button>
            </div>
         </main>
-    -->  
+    
     
         <footer class="down_low">
             <p>The Dog Breed Quiz is made possible thanks to the free API by <a href="#">DOG CEO Zine</a></p>
