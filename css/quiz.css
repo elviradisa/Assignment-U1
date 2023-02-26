@@ -1,5 +1,5 @@
 .quiz {
-    display: flex;
+    display: none;
     flex-direction: column;
 }
 
@@ -19,11 +19,6 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 5px;
-}
-
-.standby_image {
-    margin-top: 50px;
-    height: auto;
 }
 
 .logout_button {

@@ -1,4 +1,4 @@
-.login {
+.login_register {
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -6,7 +6,7 @@
 
 #title_login {
     font-size: 40px;
-    text-shadow: 4px 3px 2px rgb(235, 194, 235);
+    text-shadow: 4px 3px 2px #355b63;
 }
 
 .text_center {
@@ -14,7 +14,7 @@
 }
 
 input {
-    background-color: rgb(235, 194, 235);
+    background-color: #87a9af;
 }
 
 
@@ -29,7 +29,7 @@ input {
 button {
     height: 50px;
     font-size: 18px;
-    background-color: rgba(255, 255, 255, 0.618);
+    background-color: #b2cbc8;
 }
 
 .go_to_register_text {
@@ -68,11 +68,30 @@ button {
 }
 
 .contacting_server {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     height: 10vh;
     width: 80vw;
     background-color: rgba(255, 255, 255, 0.738);
     border-radius: 30px;
+}
+
+.status_code {
+    background-color: rgba(255, 255, 255, 0.674);
+    height: 20vh;
+    width: 80vw;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+}
+
+.close_status_display_button {
+    border-radius: 10px;
+    height: 30px;
+    width: 80px;
+    font-size: 14px;
+    background-color: rgba(133, 165, 136, 0.735);
 }

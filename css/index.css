@@ -1,29 +1,27 @@
-@font-face {
-    font-family: "RobotoCondensed-Regular";
-    src: url("fonts/RobotoCondensed-Regular.ttf");
-}
-
 body {
     height: 100vh;
     width: 100vw;
     margin: 0;
     background-color: black;
-    font-family: "RobotoCondensed-Regular";
 }
 
-img {
+.logo_image {
     height: 40px;
 }
 
+.standby_image {
+    height: auto;
+}
+
 #wrapper {
+    display: flex;
     box-sizing: border-box;
     height: 100vh;
-    display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 15px;
     border-radius: 20px;
-    background-color: rgb(161, 136, 197);
+    background-color: #438a9b;
 }
 
 .up_top {
