@@ -5,6 +5,7 @@ function go_to_register_page () {
     document.querySelector(".login_button").style.display = "none"
     document.querySelector("#title_login").textContent = "REGISTER";
     document.querySelector("#paragraph").textContent = "Ready when you are..."
+    document.querySelector("#paragraph").style.backgroundColor = "transparent";
     document.querySelector(".user_name").style.backgroundColor = "#87af9c";
     document.querySelector(".password").style.backgroundColor = "#87af9c";
     document.querySelector("#wrapper").style.backgroundColor = "#628a6f";
@@ -74,27 +75,44 @@ async function login () {
         const contacing_server = document.querySelector(".contacting_server");
         contacing_server.style.display = "flex";
         document.querySelector(".background_contacting_server").style.display = "flex";
+        document.querySelector(".quiz_response").style.display = "none";
 
         const user_name = document.querySelector(".user_name").value;
         const password = document.querySelector(".password").value;
 
-        const post_request = new Request("https://teaching.maumt.se/apis/access/");
-        const response =  await send_request(post_request);
+        const options = {
+            headers: {"Content-type": "application/json; charset=UTF-8"},
+        };
+
+        const login_request = new Request(`https://teaching.maumt.se/apis/access/?action=check_credentials&user_name=${user_name}&password=${password}`, options);
+        const response =  await send_request(login_request);
 
         contacing_server.style.display = "none";
-        document.querySelector(".status_code").style.display = "flex";
 
         if(response.ok) {
             const resource = await response.json();
+            document.querySelector(".login_register").style.display = "none";
             document.querySelector(".quiz").style.display = "flex";
+            document.querySelector(".sticky_logout").textContent = user_name;
+            get_breeds_from_URL();
         } else if (response.status === 418) {
+            document.querySelector(".status_code").style.display = "flex";
             login_status_display("I'm not a teapot!");
         } else if (response.status === 404) {
-            document.querySelector(".paragraph").textContent = "Wrong username or password!";
-            document.querySelector(".paragraph").style.backgroundColor = "white";
+            document.querySelector(".background_contacting_server").style.display = "none";
+            document.querySelector(".contacting_server").style.display = "none";
+            document.querySelector("#paragraph").textContent = "Wrong username or password!";
+            document.querySelector("#paragraph").style.backgroundColor = "#f0faf5";
+            document.querySelector("#paragraph").style.display = "flex";     
         } else if (response.status === 400) {
-            login_status_display("You need a username and password to login")
-        }
+            document.querySelector(".background_contacting_server").style.display = "none";
+            document.querySelector(".contacting_server").style.display = "none";
+            document.querySelector("#paragraph").textContent = "You need a username and password to login!";
+            document.querySelector("#paragraph").style.backgroundColor = "#f0faf5";
+            document.querySelector("#paragraph").style.display = "flex";
+        } 
+        
+        
     } catch (e) {
         console.log(e);
     }
