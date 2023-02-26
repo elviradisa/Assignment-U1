@@ -13,16 +13,19 @@
     text-align: center;
 }
 
-input {
-    background-color: #87a9af;
+#paragraph {
+    height: 30px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
 }
-
 
 label {
     font-size: 18px;
 }
 
 input {
+    background-color: #87a9af;
     height: 30px;
 }
 
@@ -88,7 +91,12 @@ button {
     border-radius: 30px;
 }
 
+.status_code_text {
+    text-align: center;
+}
+
 .close_status_display_button {
+    display: none;
     border-radius: 10px;
     height: 30px;
     width: 80px;
