@@ -29,10 +29,14 @@ input {
     height: 30px;
 }
 
+input:focus {
+    outline: 1px solid white;
+}
+
 button {
     height: 50px;
     font-size: 18px;
-    background-color: #b2cbc8;
+    background-color: #bababa;
 }
 
 .go_to_register_text {
