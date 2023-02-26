@@ -32,11 +32,6 @@
                     <p class="status_code_text"></p>
                     <button onclick="close_status_display_button()" class="close_status_display_button">CLOSE</button>
                 </div>
-
-                <div class="quiz_response">
-                    <p class="response_answer"></p>
-                    <button onclick="close_status_display_button()" class="close_display"></button>
-                </div>
             </div>
 
             <p id="paragraph" class="text_center">Let the magic start!</p>
@@ -58,12 +53,19 @@
            </div> 
 
             <img class="standby_image" src="media/logo.png" alt="background_dog">
-        
+
+            <div class="background_quiz_response">
+                 <div class="quiz_response">
+                    <p class="response_answer"></p>
+                    <button onclick="close_answer_display()" class="close_display">ONE MORE</button>
+                </div>
+            </div>
+               
            <div class="button_holder">
-            <button onclick="get_breeds_from_URL()" id="quiz_button" class="top_left"></button>
-            <button onclick="get_breeds_from_URL()" id="quiz_button" class="top_right"></button>
-            <button onclick="get_breeds_from_URL()" id="quiz_button" class="bottom_left"></button>
-            <button onclick="get_breeds_from_URL()" id="quiz_button" class="bottom_right"></button>
+            <button onclick="check_answer('top_left')" id="top_left" class="quiz_button"></button>
+            <button onclick="check_answer('top_right')" id="top_right" class="quiz_button"></button>
+            <button onclick="check_answer('bottom_left')" id="bottom_left" class="quiz_button"></button>
+            <button onclick="check_answer('bottom_right')" id="bottom_right" class="quiz_button"></button>
            </div>
         </main>
     
