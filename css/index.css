@@ -16,13 +16,17 @@ body {
 
 .standby_image {
     height: auto;
+    display: none;
+    border-radius: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 #wrapper {
     font-family: "Roboto Condensed Regular";
     display: flex;
+    min-height: 100vh;
     box-sizing: border-box;
-    height: 100vh;
     flex-direction: column;
     justify-content: space-between;
     padding: 15px;
