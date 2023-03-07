@@ -27,9 +27,7 @@ async function register () {
         contacing_server.style.display = "none";
         document.querySelector(".status_code").style.display = "flex";
 
-        console.log(response);
-
-         if(response.status === 200) {
+        if(response.status === 200) {
             status_code_display("Registration complete. Please proceed to login!")
         } else if (response.status === 400) {
             status_code_display("You need a username and password to register");
@@ -38,11 +36,9 @@ async function register () {
         } else if (response.status === 418) {
             status_code_display("I'm not a teapot!");
         } 
-
     } catch(e) {
         console.log(e);
     }
-    
 }
 
 async function login () {
@@ -53,6 +49,7 @@ async function login () {
 
         const user_name = document.querySelector(".user_name").value;
         const password = document.querySelector(".password").value;
+        console.log(user_name);
 
         const options = {
             headers: {"Content-type": "application/json; charset=UTF-8"},
@@ -64,15 +61,9 @@ async function login () {
         contacing_server.style.display = "none";
 
         if(response.status === 200) {
-            const resource = await response.json();
+            const resource = await response.json(); 
             localStorage.setItem("username", resource.data.user_name);
-            document.querySelector(".login_register").style.display = "none";
-            document.querySelector(".quiz").style.display = "flex";
-            document.querySelector(".sticky_logout").textContent = user_name;
-            document.querySelector("#wrapper").style.backgroundColor = "#8f7dba";
-            document.querySelector(".standby_image").style.display = "flex";
-            document.querySelector(".user_name").value = "";
-            document.querySelector(".password").value = "";
+            quiz(user_name);
         } else if (response.status === 418) {
             document.querySelector(".status_code").style.display = "flex";
             login_status_display("I'm not a teapot!");
@@ -89,8 +80,6 @@ async function login () {
             document.querySelector("#paragraph").style.backgroundColor = "#f0faf5";
             document.querySelector("#paragraph").style.display = "flex";
         } 
-        
-        
     } catch (e) {
         console.log(e);
     }
