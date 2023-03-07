@@ -1,13 +1,12 @@
 "use strict";
 
 async function quiz (user_name) {
-
-    document.querySelector(".login_register").style.display = "none";
-    document.querySelector(".sticky_logout").textContent = user_name;
-    document.querySelector(".standby_image").style.display = "none";
-    document.querySelector(".standby_image").style.display = "flex";
-    document.querySelector("#wrapper").style.backgroundColor = "#8f7dba";
     document.querySelector(".quiz").style.display = "flex";
+    document.querySelector(".standby_image").style.display = "none";
+    document.querySelector(".sticky_logout").textContent = user_name;
+    document.querySelector(".login_register").style.display = "none";
+    document.querySelector("#wrapper").style.backgroundColor = "#8f7dba";
+    document.querySelector(".standby_image").style.display = "flex";
 
     let four_dogs = [];
     for (let i = 0; i < 4; i++) {
@@ -17,6 +16,7 @@ async function quiz (user_name) {
     const correct_dog = four_dogs[Math.floor(Math.random() * four_dogs.length)];
 
     const four_options = document.querySelectorAll(".quiz_button");
+
     for (let i = 0; i < four_options.length; i++) {
         four_options[i].textContent = four_dogs[i].name;
     }
@@ -35,20 +35,20 @@ async function quiz (user_name) {
 
     function check_answer (event) {
         if (event.target.textContent === correct_dog.name) {
-            document.querySelector(".background_quiz_response").style.display = "flex";
-            document.querySelector(".response_answer").textContent = "Correct!"
             document.querySelector(".quiz_response").style.display = "flex";
+            document.querySelector(".response_answer").textContent = "Correct!"
             document.querySelector(".quiz_response").style.backgroundColor = "#a9e8bf";
             document.querySelector(".close_display").style.display = "flex";
+            document.querySelector(".background_quiz_response").style.display = "flex";
             document.querySelector("#wrapper").style.overflow = "hidden";
             document.querySelector("#wrapper").style.height = "100vh";
             
         } else {
-            document.querySelector(".background_quiz_response").style.display = "flex";
-            document.querySelector(".response_answer").textContent = "I'm afraid not!"
             document.querySelector(".quiz_response").style.display = "flex";
             document.querySelector(".close_display").style.display = "flex";
+            document.querySelector(".response_answer").textContent = "I'm afraid not!"
             document.querySelector(".quiz_response").style.backgroundColor = "#e69753";
+            document.querySelector(".background_quiz_response").style.display = "flex";
             document.querySelector("#wrapper").style.overflow = "hidden";
             document.querySelector("#wrapper").style.height = "100vh";
         }
@@ -60,10 +60,10 @@ function logout () {
     document.querySelector(".contacting_server").style.display = "none";
     document.querySelector(".login_register").style.display = "flex";
     document.querySelector(".status_code").style.display = "none";
+    document.querySelector(".quiz").style.display = "none";
     document.querySelector("#paragraph").textContent = "Let the magic start!"
     document.querySelector("#paragraph").style.backgroundColor = "transparent";
     document.querySelector("#wrapper").style.backgroundColor = "#438a9b";
-    document.querySelector(".quiz").style.display = "none";
 
     document.querySelector(".user_name").value = "";
     document.querySelector(".password").value = "";
@@ -77,7 +77,6 @@ function close_answer_display () {
     document.querySelector(".quiz_response").style.display = "none";
     document.querySelector("#wrapper").style.overflow = "scroll";
     document.querySelector("#wrapper").style.height = "";
-
     const user_name = document.querySelector(".sticky_logout").textContent;
     quiz(user_name);
 }

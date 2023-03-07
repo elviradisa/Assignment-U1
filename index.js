@@ -37,16 +37,16 @@ function check_username () {
     const username = localStorage.getItem("username");
 
     if (username) {
-        quiz(username);
+        quiz(username)
     } else {
         document.querySelector(".background_contacting_server").style.display = "none";
         document.querySelector(".contacting_server").style.display = "none";
         document.querySelector(".login_register").style.display = "flex";
         document.querySelector(".status_code").style.display = "none";
+        document.querySelector(".quiz").style.display = "none";
         document.querySelector("#paragraph").textContent = "Let the magic start!"
         document.querySelector("#paragraph").style.backgroundColor = "transparent";
         document.querySelector("#wrapper").style.backgroundColor = "#438a9b";
-        document.querySelector(".quiz").style.display = "none";
     }
 }
 check_username();

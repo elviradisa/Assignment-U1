@@ -49,7 +49,6 @@ async function login () {
 
         const user_name = document.querySelector(".user_name").value;
         const password = document.querySelector(".password").value;
-        console.log(user_name);
 
         const options = {
             headers: {"Content-type": "application/json; charset=UTF-8"},
