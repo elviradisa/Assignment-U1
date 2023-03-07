@@ -30,17 +30,17 @@
                 <p class="contacting_server">Contacting Server...</p>
                 <div class="status_code">
                     <p class="status_code_text"></p>
-                    <button onclick="close_status_display_button()" class="close_status_display_button">CLOSE</button>
+                    <button class="close_status_display_button">CLOSE</button>
                 </div>
             </div>
 
             <p id="paragraph" class="text_center">Let the magic start!</p>
 
-            <button onclick="login()" class="login_button">Login</button>
-            <button onclick="register()" class="register_button">Register</button>
+            <button class="login_button">Login</button>
+            <button class="register_button">Register</button>
 
-            <a onclick="go_to_register_page()" href="#" class="text_center go_to_register_text">New to this? Register for free</a>
-            <a onclick="go_to_login_page()" href="#" class="text_center go_to_login_text">Already have an account? Return to login</a>
+            <a href="#" class="text_center go_to_register_text">New to this? Register for free</a>
+            <a href="#" class="text_center go_to_login_text">Already have an account? Return to login</a>
         </main>
 
         
@@ -49,7 +49,7 @@
 
            <div class="login_information">
             <p class="sticky_logout"></p>
-            <button onclick="logout()" class="logout_button">logout</button>
+            <button class="logout_button">logout</button>
            </div> 
 
             <img class="standby_image" src="media/logo.png" alt="background_dog">
@@ -57,15 +57,15 @@
             <div class="background_quiz_response">
                  <div class="quiz_response">
                     <p class="response_answer"></p>
-                    <button onclick="close_answer_display()" class="close_display">ONE MORE</button>
+                    <button class="close_display">ONE MORE</button>
                 </div>
             </div>
                
            <div class="button_holder">
-            <button onclick="check_answer('top_left')" id="top_left" class="quiz_button"></button>
-            <button onclick="check_answer('top_right')" id="top_right" class="quiz_button"></button>
-            <button onclick="check_answer('bottom_left')" id="bottom_left" class="quiz_button"></button>
-            <button onclick="check_answer('bottom_right')" id="bottom_right" class="quiz_button"></button>
+            <button id="top_left" class="quiz_button"></button>
+            <button id="top_right" class="quiz_button"></button>
+            <button id="bottom_left" class="quiz_button"></button>
+            <button id="bottom_right" class="quiz_button"></button>
            </div>
         </main>
     
